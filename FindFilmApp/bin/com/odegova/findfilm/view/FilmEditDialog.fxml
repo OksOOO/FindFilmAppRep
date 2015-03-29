@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.odegova.findfilm.view.FilmEditDialogController">
+   <children>
+      <GridPane layoutX="19.0" layoutY="21.0" prefHeight="235.0" prefWidth="470.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="106.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="407.0" minWidth="10.0" prefWidth="364.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.0" minHeight="24.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="60.0" prefHeight="97.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Название">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Год выпуска" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Жанр" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Описание (сайт)" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Где лежит" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="yearField" maxWidth="50.0" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="nameField" GridPane.columnIndex="1" />
+            <TextField fx:id="imdbField" maxWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin></TextField>
+            <TextField fx:id="kinopoiskField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="locationField" prefHeight="25.0" prefWidth="268.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="55.0" />
+               </GridPane.margin></TextField>
+            <Button mnemonicParsing="false" onAction="#handleOpen" prefHeight="25.0" prefWidth="48.0" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="315.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="genreField" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="110.0" />
+               </GridPane.margin>
+            </TextField>
+            <ChoiceBox fx:id="choiceBox" prefHeight="25.0" prefWidth="117.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="260.0" />
+               </GridPane.margin></ChoiceBox>
+            <Label text="imdb" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="60.0" />
+               </GridPane.margin></Label>
+            <Label text="Комментарий" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="commentField" prefHeight="55.0" prefWidth="371.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label prefHeight="17.0" prefWidth="155.0" text="Оригин. название" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="haveViewedCheckBox" mnemonicParsing="false" text="Просмотрен" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="160.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="englishNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox fx:id="haveDownloadedCheckBox" mnemonicParsing="false" text="Загружен" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="270.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </CheckBox>
+            <Label text="Картинка" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="imageLocationField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <HBox layoutX="215.0" layoutY="259.0" spacing="5.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+		<children>
+			<Button layoutX="167.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleOk" prefWidth="90.0" text="OK" />
+			<Button layoutX="221.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="90.0" text="Cancel" />
+		</children>
+	  </HBox>
+   </children>
+</AnchorPane>
